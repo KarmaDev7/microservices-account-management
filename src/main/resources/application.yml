@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: account-ws
+  devtools:
+    restart:
+      enabled: true
+  rabbitmq:
+    host:  localhost
+    port:  5672
+    username: guest
+    password: guest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/usermicroservice
+    username: root
+    password: sumit
+  jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka
+
